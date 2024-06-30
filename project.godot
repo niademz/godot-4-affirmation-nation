@@ -14,6 +14,11 @@ config/name="Affirmation Nation"
 run/main_scene="res://scenes/nation.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+run/stretch/scale=4.0
+
+[autoload]
+
+MultiplayerManager="*res://scripts/multiplayer/multiplayer_manager.gd"
 
 [rendering]
 
