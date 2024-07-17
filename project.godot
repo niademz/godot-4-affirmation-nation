@@ -19,6 +19,9 @@ run/stretch/scale=4.0
 [autoload]
 
 MultiplayerManager="*res://scripts/multiplayer/multiplayer_manager.gd"
+Nakama="*res://addons/com.heroiclabs.nakama/Nakama.gd"
+Music="*res://scenes/Music.tscn"
+Global="*res://scripts/global.gd"
 
 [rendering]
 

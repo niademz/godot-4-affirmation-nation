@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbudnkeuc3040"]
+
+[ext_resource type="Script" path="res://proc_gen_world.gd" id="1_tsope"]
+[ext_resource type="PackedScene" uid="uid://tlkoa6sbnd71" path="res://scenes/player.tscn" id="2_3df7t"]
+[ext_resource type="TileSet" uid="uid://bf5somtllgctp" path="res://data/nation.tres" id="2_p0fe6"]
+
+[sub_resource type="Gradient" id="Gradient_stp7n"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.448065, 0.651731, 0.816701)
+colors = PackedColorArray(0, 0, 1, 1, 1, 1, 0.2, 1, 0, 1, 0.2, 1, 0.605962, 0.252677, 5.77569e-07, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ojgrh"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tluis"]
+color_ramp = SubResource("Gradient_stp7n")
+noise = SubResource("FastNoiseLite_ojgrh")
+
+[node name="proc_gen_world" type="Node2D"]
+script = ExtResource("1_tsope")
+noise_height_text = SubResource("NoiseTexture2D_tluis")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_p0fe6")
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("2_3df7t")]
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]

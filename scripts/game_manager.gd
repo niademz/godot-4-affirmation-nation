@@ -1,6 +1,9 @@
 extends Node2D
 
-
+func _ready():
+	if OS.has_feature("dedicated_server"):
+		print("starting dedicated server...")
+		MultiplayerManager.become_host()
 
 func become_host():
 	print ("Become host pressed")
