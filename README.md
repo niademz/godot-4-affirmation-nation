@@ -1,4 +1,4 @@
-Affirmation Nation
+
 Welcome to Affirmation Nation, a unique and engaging feature of the Safe Space platform. Affirmation Nation is a 2D game designed to promote positive mental health through community building, affirmations, and resource management. This repository contains the codebase for the game, developed using the Godot game engine.
 Table of Contents
 Introduction
